@@ -3,4 +3,3 @@
   dnf:
     name: unzip
     state: present
-  when: ansible_os_family == "Redhat"
