@@ -1,5 +1,4 @@
 ---
-# This task installs pre dependencies of xorg
 - name: "RedHat| Installing baselevel RHEL"
   dnf:
     name: unzip
