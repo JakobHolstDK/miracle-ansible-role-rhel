@@ -1,0 +1,7 @@
+---
+# This task installs pre dependencies of xorg
+- name: "RedHat| Installing baselevel RHEL"
+  dnf:
+    name: unzip
+    state: present
+  when: ansible_os_family == "Redhat"
