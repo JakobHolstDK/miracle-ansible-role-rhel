@@ -13,7 +13,7 @@
   ignore_errors: yes
 
 - name: "Enable epel if needed"
-  dnf:
-    name: epel-release
-    state: latest
+  command:  yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
   become: True
+
+
