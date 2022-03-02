@@ -11,3 +11,10 @@
   shell: "subscription-manager register --force --org={{ myorg }} --activationkey={{ mykey }}"
   become: True
   ignore_errors: yes
+
+- name: "Enable epel if needed"
+  dnf:
+    name: epel-release
+    state: latest
+  become: True
+  when: ansible_facts['os_family'] == 'RedHat' and ansible_facts['distribution_major_version'] == '8' and "{enable_epel}" == True
